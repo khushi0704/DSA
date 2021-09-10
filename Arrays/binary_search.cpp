@@ -24,7 +24,27 @@ int binary_search(int arr[],int n,int key){
     }
     return -1; // element not found
 }
-
+/* ALTERNATIVE APPROACH
+int binary_search(int arr[],int n,int key){
+   int s=0; int e=n-1;
+    while(s<=e){
+        // find mid 
+        int mid = s+e/2;
+        // compare
+        if(key == arr[mid]){
+            return mid;
+        }
+        // when element less than mid , then decrement e
+        else if(arr[mid]>key){
+           e=mid-1; 
+        }
+        else{
+        s=mid+1;
+        }
+    }
+    return -1; // element not found
+}
+*/
 int main(){
     int arr[]={2,4,7,9,12};
     int n = sizeof(arr)/sizeof(int);
