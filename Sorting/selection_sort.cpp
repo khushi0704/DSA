@@ -1,7 +1,7 @@
 // repeatedly find the minimum element from unsorted array & place it to the beginning
 #include <iostream>
 using namespace std;
-// insertion sort
+// selection sort
 int main() {
 	int arr[]={4,6,2,5,3};
 
