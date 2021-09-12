@@ -7,7 +7,7 @@ int main() {
 	int arr[]={-1,-2,-3,-4};
 	// 5 3 2 6
 	// checks temp=3 ; prev=5;5>3? ; swap them ; arr = {3,5,2,6}
-	//cur = 2 ; prev = 
+	//cur = 2 ; prev = 5,3 ; 2<5? swap them , {3,2,5,6} , 2<3?; 
 	int n=sizeof(arr)/sizeof(int);
 	for(int i=1;i<=n-1;i++){
 		int current = arr[i];
