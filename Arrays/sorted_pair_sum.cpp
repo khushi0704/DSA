@@ -4,7 +4,7 @@ using namespace std;
 int main() {
 	int arr[]={10,22,28,29,30,34};
 	int x=54;
-int max=0;
+	int max=0;
 	int rel=0;
 	int ler=0;
 	int n = sizeof(arr)/sizeof(int);

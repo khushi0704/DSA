@@ -26,12 +26,12 @@ int maxSumSubarray(vector<int> A) {
         cur+=A[i];
         if(cur<0){
             cur=0;
+        }
+        if(cur>max){
+            max=cur;
+        }
     }
-    if(cur>max){
-        max=cur;
-    }
-    }
-	}
+}
    return max; 
 }
 int main(){
