@@ -1,0 +1,3 @@
+pas[i].resize(i+1);
+
+meaning :
