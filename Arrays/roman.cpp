@@ -2,7 +2,7 @@
 using namespace std;
 void roman(int n){
     int arr[7]={1,5,10,50,100,500,1000};
-    string dobby[10] = {"i","v","x","l","d","m"};
+    string dobby[10] = {"i","v","x","l","c","d","m"};
     int i=7;
     while(n>0){
 
