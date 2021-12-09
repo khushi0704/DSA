@@ -10,33 +10,31 @@ public:
         arr= new int[ms];
         cs=0;
         front=0;
-        rear=0;
+        rear=ms-1;
     }
     bool isFull(){
-        return ms==cs
+        return ms==cs; // max cap equals curretn size
     }
-
-
-    int q_front(){
-        return arr[front];
+    bool isEmpty(){
+        return cs==0;
     }
     void encqueue(int data){
-        if(!isFull){
+        if(!isFull()){
             // insert at rear+1
-            rear=(rear+1)%ms;
+            rear = (rear+1) % ms; // since its a circular queue
             arr[rear]=data;
             cs++;
         }
     }
     void decqueue(){
         if(!isEmpty()){
-            data= q_front();
-            front=(front+1)%ms;
+            //data= q_front();
+            front = (front + 1)%ms;
             cs--;
-
         }
     }
-    bool isEmpty(){
-        return cs==0;
+
+    int q_front(){
+        return arr[front];
     }
 };
