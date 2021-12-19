@@ -62,7 +62,7 @@ class Stack{
         }
     }
     bool empty(){
-      return q1.empty() and q2.empty();
+     return q1.empty() and q2.empty();
    }
 };
 int main(){
