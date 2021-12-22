@@ -19,9 +19,9 @@ class List{
     Node * tail;
 public:
     List():head(NULL),tail(NULL){}
-Node * begin(){
-    return head;
-}
+    Node * begin(){
+        return head;
+    }
     void push_front(int data){
         if(head==NULL){
             Node * n = new Node(data);
