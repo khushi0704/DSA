@@ -40,15 +40,16 @@ class Bit_Mani{
         int mask = m<<i;
         n = n| mask;
     }
-    void bin_repr(int &n){
-        vector<int> v;
-        while(n!=0){
-            v.push_back(n%2);
-            n=n/2;
+    int convertToBinary(int n){
+        int ans=0;
+        int p=1; //power
+        while(n>0){
+            int last_bit = (n&1);
+            ans += p*last_bit;
+            p=p*10;
+            n=(n>>1);
         }
-        for(int i=v.size()-1;i>=0;i--){
-        	cout<<v[i];
-        }
+    return ans;
     }
 };
 int main(){
