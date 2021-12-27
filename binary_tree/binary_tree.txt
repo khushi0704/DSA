@@ -1,0 +1,21 @@
+A Binary Tree can have at most 2 children
+It is a hierarchial type of data structure
+for example : a computer has many drives inside which we have resp folders 
+and so on . 
+we have a root node , under which we have say siblings , and each sibling may have at most 
+2 children and so on , a node with no child is called a leaf node.
+
+we have levels in a Tree
+height of a tree - max level , from node to the deepest leaf
+depth of a tree -  from root to that node
+
+creating , searching , traversal
+
+
+ tree prblms follow a recursive structure
+
+ important topic for interviews
+
+ mostly , all prblms can be solved by dividing them into sub problems 
+ and making recursive calls on subtrees or iteratively
+ 
