@@ -2,7 +2,8 @@
 using namespace std;
 // reversing an array
 void reverse(int arr[],int n){
-	int s=0;int e=n-1;
+	int s=0;
+	int e=n-1;
 	while(s<=e){
 		int tem = arr[s];
 			arr[s]=arr[e];
