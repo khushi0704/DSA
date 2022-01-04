@@ -1,0 +1,23 @@
+arrays - 1 que left
+basic sorting algorithms - 2 que left
+2d arrays - 1 que left
+vector data structure  - 2 que left
+bit manipulation - 3 que left
+recursion basics 21
+divide n conquer - 4 ques left
+backtracking 19
+space and time complexity 9
+object oriented programming 10
+linkedlist 7 left
+stacks - 11 left
+queues - 2 que 
+BInary Tree 13 
+BST - 11
+Heaps / priority queue 15
+Hashing 13
+Tree 6
+Graphs 3 que
+Dynamic Programming (IMP) - 15
+Project - Shopping backend - 7
+
+
