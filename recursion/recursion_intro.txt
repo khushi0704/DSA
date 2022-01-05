@@ -1,0 +1,36 @@
+to get answer for the bigger problem 
+
+example : most classical : factorial
+
+fact(n) : n*fact(n-1)
+
+base case : (here the probleme cannot be broken further)
+fact(0) = 1
+fact(1) = 1
+
+return a larger problem in return of a smaller problem
+
+base case : ans of the sub problem
+
+two directions :
+ towards the base case (top down approach)
+ towards the problem (bottom up approach)
+
+ another example : 
+
+ we can define the operation "go to home " as 
+  base case :
+  when you have reached home : stop moving 
+
+  recursive case :
+  2) take one step toward home
+  3)"go to home"
+
+
+ => recursion = principle of mathematical induction
+  1)figure of the smallest case
+  2) always assume the subproblem can
+   be solved
+  3) solve the current problem assuming 
+  subproblem solution exists
+
