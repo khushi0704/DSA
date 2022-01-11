@@ -1,0 +1,62 @@
+in oop , the functions are tied around objects , we deal with these objects and classes
+object denotes an entity in a real world
+attributes + methods
+
+Objects 
+    State(Data)
+    Behavior (functions)
+
+Why need objects :
+can write related code 
+easy , maintainable , 
+
+Encapsulation - ensures modularity
+protection against unauthorized access
+
+class - blueprint , map that tells compiler how to make an actual object
+
+actual home - object 
+and map of that - class
+
+object is instance of the class and occupies some memories
+
+default methods / functions :
+     constructor , copy constructor 
+     copy assignment operator
+     destructor
+
+constructor name = class name 
+called automatically when an object is created
+memory allocation happens when constructor is called
+constructor is called only once for each object
+
+copy constructor :
+creates a copy of a given object
+
+default copy constructor 
+
+when to create user defined copy constructor
+
+the compiler created copy constructor works fine for most cases 
+we need to define our own copy constructor only if 
+an object has pointers to dynamically allocated objects
+i.e a deep copy of object is needed
+
+
+assignment operator is called when an already initialized
+is assigned a new value from another existing object
+
+deep copy is possible only with user defined copy constructor
+
+
+function that is called automatically when an 
+object is destroyed , i.e object goes out of scope
+or destroyed explicitly by call or delete
+
+compiler provides a default destructor
+
+user defined destructor is needed when class
+contains pointers to dynamically allocated 
+
+we need it to avoid memory leak when memory s 
+allocated dynamically
