@@ -1,0 +1,10 @@
+order complexity analysis
+
+amount of time/space taken by the algorithm to run as a 
+function of input size
+
+theoritical analysis
+
+time f(N) quadratic , linear , constant
+space f(N)
+
