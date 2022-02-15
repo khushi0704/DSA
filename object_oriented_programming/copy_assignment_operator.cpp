@@ -10,15 +10,7 @@ class Product{
     Product(){
         cout<<"constructor called"<<endl;
     }
-    ~Product(){
-        // to avoud memeory leak when memory is allocated dynamically
-        cout<<"deleting"<<name<<endl;
-        if(name != NULL){
-             delete [] name;
-        name=NULL;
-        }
-       
-    }
+
     Product(int id,char *n,int price,int selling_price){
         this->id = id;
         this->name=new char(strlen(n)+1);
@@ -33,6 +25,15 @@ class Product{
         mrp=X.mrp;
         selling_price=X.selling_price;
     }
+        void operator=(Product &X){
+            //deep copy
+            id = X.id;
+            this->name=new char(strlen(X.name)+1);
+            strcpy(name,X.name);
+            mrp=X.mrp;
+            selling_price=X.selling_price;
+     //   cout<<"inside copy assignment op";
+    }
     void setPrice(int p){
         this->mrp=p;
     }
@@ -46,13 +47,13 @@ class Product{
         cout<<"Selling Price : "<<selling_price<<endl;
         cout<<"---------------------------"<<endl;
     }
+
 };
 int main(){
     Product camera(10101,"RealMe",10000,100);
-    Product old_camera(camera);
-    // set name & price for the old camera
-    old_camera.setName("RealMe0");
-    old_camera.setPrice(5000);
+    Product old_camera;
+    old_camera=camera; //copy assignment operator
+    old_camera.setName("RealMe1");// chnages for both objects due to shallow copy
     old_camera.showDetails();
     camera.showDetails();
     return 0;

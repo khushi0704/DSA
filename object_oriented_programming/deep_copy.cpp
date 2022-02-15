@@ -10,15 +10,7 @@ class Product{
     Product(){
         cout<<"constructor called"<<endl;
     }
-    ~Product(){
-        // to avoud memeory leak when memory is allocated dynamically
-        cout<<"deleting"<<name<<endl;
-        if(name != NULL){
-             delete [] name;
-        name=NULL;
-        }
-       
-    }
+
     Product(int id,char *n,int price,int selling_price){
         this->id = id;
         this->name=new char(strlen(n)+1);

@@ -24,7 +24,7 @@ class Product{
     }
 
     Product(int id,string n,int price,int selling_price){
-        this->id = id;\
+        this->id = id;
           this->name=n;
         this->mrp=price;
         this->selling_price=selling_price;

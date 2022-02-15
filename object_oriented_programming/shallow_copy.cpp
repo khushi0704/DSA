@@ -10,28 +10,21 @@ class Product{
     Product(){
         cout<<"constructor called"<<endl;
     }
-    ~Product(){
-        // to avoud memeory leak when memory is allocated dynamically
-        cout<<"deleting"<<name<<endl;
-        if(name != NULL){
-             delete [] name;
-        name=NULL;
-        }
-       
-    }
+
     Product(int id,char *n,int price,int selling_price){
         this->id = id;
         this->name=new char(strlen(n)+1);
-        strcpy(name,n);
         this->mrp=price;
         this->selling_price=selling_price;
-    }  
+    }
+    // same shallow copy
     Product(Product &X){
-        id = X.id;
-        this->name=new char(strlen(X.name)+1);
-        strcpy(name,X.name);
-        mrp=X.mrp;
-        selling_price=X.selling_price;
+    id = X.id;
+    name=X.name;
+    mrp=X.mrp;
+    selling_price=X.selling_price;
+    
+    
     }
     void setPrice(int p){
         this->mrp=p;
