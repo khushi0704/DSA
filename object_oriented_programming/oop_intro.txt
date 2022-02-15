@@ -60,3 +60,9 @@ contains pointers to dynamically allocated
 
 we need it to avoid memory leak when memory s 
 allocated dynamically
+
+in shallow copy :
+the pointer oints to the same copy of objects of class
+
+in deep copy :
+it creates copy of each object inside of the class
