@@ -14,11 +14,10 @@ int main() {
 				min=j;
 			}
 		}
-		
-			int temp=arr[pos];
+		if(cur>arr[min])
+			{int temp=arr[pos];
 				arr[pos]=arr[min];
-				arr[min]=temp;
-		
+				arr[min]=temp;}
 	}
 	for(int i =0;i<n;i++){
 		cout<<arr[i]<<" ";
