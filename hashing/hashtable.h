@@ -18,6 +18,17 @@ class HashTable{
     int cs; // curretn size
     int ts; // total size
     public:
+
+    int hashfun(string key){
+        int power=1;
+        int idx = 0;
+        for(auto ch : key){
+            idx = (idx + (ch*power))%ts;
+            power=(power*29)%ts;
+        }
+        return idx;
+    }
+
     HashTable(int default_size = 7){
         ts=default_size;
 // a table pointing to an array
@@ -26,5 +37,13 @@ class HashTable{
             table[i]=NULL;
         }
     }
+    void insert(string key,T value){
+        int idx = hashfun(key);
+        Node<T> *n= new Node<T>(key,value);
 
+        // insertion at head of the linked list
+        n->next = table[idx];
+        table[idx]=n;
+        cs++;
+    }
 };
