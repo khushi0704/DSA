@@ -1,4 +1,6 @@
 #include <cstring>
+#include <iostream>
+using namespace std;
 template<typename T>
 class Node{
     public:
@@ -43,7 +45,7 @@ class HashTable{
            int oldTs = ts;
             ts = 2*ts+1;
         table = new Node<T>*[ts]; // you should make it prime
-        for(int i-0;i<ts;i++){
+        for(int i=0;i<ts;i++){
             table[i]=NULL;
         }
         // copy elements from the old table to
@@ -83,5 +85,33 @@ class HashTable{
         n->next = table[idx];
         table[idx]=n;
         cs++;
+
+        float load_factor = cs/float(ts);
+        if(load_factor>0.7){
+            rehash();
+        }
+    }
+    T* search(string key){
+        int idx = hashfun(key);
+        Node<T> *temp = table[idx];
+        while(temp!=NULL){
+            if(temp->key == key){
+                return &temp->value;
+            }
+        }
+        return NULL;
+    }
+    void print(){
+        // iterate over the bucket
+        for(int i=0;i<ts;i++){
+            cout<<" bucket "<<i<<"->";
+            // iterate over the items inside the bucket
+            Node<T>* temp=table[i];
+            while(temp!=NULL){
+                cout<<temp->key<<" -> ";
+                temp=temp->next;
+            }
+            cout<<endl;
+        }
     }
 };
