@@ -101,6 +101,21 @@ class HashTable{
         }
         return NULL;
     }
+    // supercool functionality
+    // returning a memory location by reference 
+    T& operator[](string key){
+        // return the value    
+        // if key is not found then craete a new node 
+        // otherwise return the exisiting node
+        T* ValueFound = search(key);
+        if(ValueFound == NULL){
+            // create a node 
+            T object;
+            insert(key,object);
+            ValueFound = search(key);
+        }
+        return *ValueFound;
+    }
     void erase(string key){
         int idx = hashfun(key);
         Node<T> *temp= table[idx];
