@@ -1,0 +1,7 @@
+in the erase operation ,a segmentation fault arises in case 
+i am deleting the pointers , example
+delete temp;
+when I comment out delete temp , i.e when not deleting those memories
+the output is coming nice
+that is hapenning because those pointers are allocated dynamically and gets deleted automatically when program finishes
+Search more about this  

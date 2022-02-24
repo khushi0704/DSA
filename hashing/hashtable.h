@@ -101,6 +101,29 @@ class HashTable{
         }
         return NULL;
     }
+    void erase(string key){
+        int idx = hashfun(key);
+        Node<T> *temp= table[idx];
+        if(temp->key == key){
+            table[idx]=temp->next;
+           // delete temp;
+            return;
+        }
+        else{
+            Node<T> *prev = temp;
+            temp=temp->next;
+        while(temp!=NULL){
+            if(temp->key == key){
+                prev->next=temp->next;
+               // delete prev;
+               // delete temp;
+                return;
+            }
+            prev=temp;
+            temp=temp->next;
+        }
+        }
+    }
     void print(){
         // iterate over the bucket
         for(int i=0;i<ts;i++){

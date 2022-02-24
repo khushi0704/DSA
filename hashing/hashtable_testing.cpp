@@ -13,12 +13,15 @@ int main(){
     h.insert("banana",30);
     h.insert("lays",10);
     h.print();
-    int *price = h.search("orange");
+    h.erase("apple");
+    h.print();
+   /* int *price = h.search("orange");
     if(price!=NULL){
         cout<<"Price of orange"<<" is "<<*price<<endl;
     }
     else{
         cout<<"The item is not present in the Menu"<<endl;
     }
+    */
     return 0;
 }
