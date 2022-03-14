@@ -1,22 +1,25 @@
 #include <iostream>
 using namespace std;
+template<typename T>
 struct Node{
-    int data;
+    T data;
     // we use node * link and not int *link 
     // bcoz we are pointing to a node's address & not just an int var address
     // for example , to store address of a char array 
     // we use char *arr
-    Node *next=NULL;
+    Node<T> *next=NULL;
 };
 // this top pointer will store the address of the node at top
-Node *temp=NULL;
+template<typename T>
+Node<T> *temp=NULL;
+template<typename T>
 class Stack{
     private:
-    Node *top=NULL;
+    Node<T> *top=NULL;
     public:
-    void push(int num){
+    void push(T num){
         // create a new node
-        Node *n = new Node();
+        Node<T> *n = new Node<T>();
         if(isempty()){
             top=n;
         }
@@ -26,17 +29,19 @@ class Stack{
         }
         n->data = num;
     }
-    int pop(){
+    T pop(){
         // removes the top element
-        int data = top->data;
+        string data = top->data;
+        Node<T> *temp=top;
         top = top->next;
+        delete temp;
         return data;
     }
-    int stack_top(){
+    T stack_top(){
         return top->data;
     }
     void display(){
-        Node *temp=top;
+        Node<T> *temp=top;
         while(temp!=NULL){
             cout<<temp->data<<" ";
             temp=temp->next;
@@ -48,12 +53,12 @@ class Stack{
     }
 };
 int main(){
-    Stack s;
+    Stack<string> s;
     cout<<s.isempty()<<endl;
-    s.push(1);
-    s.push(2);
-    s.push(3);
-    s.push(4);
+    s.push("h");
+    s.push("e");
+    s.push("l");
+    s.push("l");
     s.display();
     cout<<"top: "<<s.stack_top()<<endl;
     s.pop();
