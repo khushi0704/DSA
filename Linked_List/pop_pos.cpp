@@ -76,6 +76,17 @@ public:
             tail=n;
         }
     }
+    void pop_front(){
+        // delete head
+        // deleting head wil delete all the connected 
+        // linked lists so 
+        // we'll make head point to NULL
+        Node *temp = head;
+        // appoint the next head
+        head = head->next;
+        temp->next = NULL;
+        delete temp;
+    }
     void insert(int data,int pos){
         if(pos==0){
             push_front(data);
@@ -100,8 +111,38 @@ int search(int key){
         temp=temp->next;
     }
     return -1;
-
 }
+    void pop_back(){
+        // remove the last node 
+        Node *temp = head;
+        while(temp->next->next != NULL){
+            temp = temp->next;
+        }
+        Node *lastNode = temp->next;
+        temp->next=NULL;
+     delete lastNode;
+    }
+    void pop_pos(int idx){
+        if (head == NULL) {
+      return;
+   }
+   Node* temp = head;
+   if (idx == 1) {
+      head = temp->next;
+      free(temp);
+      return;
+   }
+   for (int i = 2; temp != NULL && i < idx - 1; i++) {
+      temp = temp->next;
+   }
+   if (temp == NULL || temp->next == NULL) {
+      return;
+   }
+   Node *next = temp->next->next;
+   free(temp->next);
+   temp->next = next;
+    }
+
 };
 int main(){
     List l;
@@ -111,5 +152,11 @@ int main(){
     l.push_back(4);
     l.push_back(5);
     l.push_back(6);
+    l.pop_pos(2);
+    Node* head = l.begin();
+    while(head!=NULL){
+        cout<<head->getData()<<"->";
+        head = head->next;
+    }
       return 0;
 }

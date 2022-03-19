@@ -3,6 +3,7 @@
 using namespace std;
 
 int main(){
+    // created statically
     List l;
     l.push_front(1);
     l.push_front(0);

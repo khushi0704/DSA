@@ -4,7 +4,7 @@ class List;
 
 class Node{ 
     int data;
-    
+
 public:
 Node* next;
     Node(int d):data(d),next(NULL){}
@@ -17,10 +17,27 @@ Node* next;
 class List{
     Node * head;
     Node * tail;
+    int searchHelper(Node *start,int key){
+        if(start == NULL){
+            // key was not found
+            return -1;
+        }
+        int idx = searchHelper(start->next,key);
+        if(idx == -1){
+            return -1;
+        }
+        else{
+            return idx+1;
+        }
+    }
 public:
     List():head(NULL),tail(NULL){}
     Node * begin(){
         return head;
+    }
+    int recursiveSearch(int key){
+        int idx = searchHelper(head,key);
+        return idx;
     }
     void push_front(int data){
         if(head==NULL){
@@ -70,9 +87,7 @@ int search(int key){
     return -1;
 
 }
-int recursiveSearch(int key){
-    
-}
+
 /*bool search(Node* head,int key){
     Node* temp=head;
     while(temp!=NULL){
