@@ -1,0 +1,8 @@
+generic tree like data structure
+efficient information retrieva ds
+searches in optimal time O(key length) but uses extra storage
+
+important operations :
+insert a new word
+search for a given word
+

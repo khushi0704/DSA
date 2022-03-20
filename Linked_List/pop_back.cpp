@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-// forward decaration
 class List;
 class Node{ 
     int data;
@@ -112,6 +111,7 @@ int search(int key){
     }
     return -1;
 }
+
     void pop_back(){
         // remove the last node 
         Node *temp = head;
