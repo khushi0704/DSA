@@ -27,8 +27,7 @@ void printPreorder(Node *root){
     if(root==NULL){
         return;
     }
-    cout<<root->data<<endl;
-    
+    cout<<root->data<<endl;   
 }
 int main(){
 // 1 2 4 -1 -1 5 7 -1 -1 -1 3 -1 6 -1 -1

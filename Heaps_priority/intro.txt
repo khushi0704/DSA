@@ -1,0 +1,32 @@
+vaccination drive : example
+there are long queues : but vaccination is done only on the basis of
+priority factors say : doctors , age 
+
+
+online portal :
+say we have only 250 doses 
+i want my doftware to find ppl accourding to my 
+prioritysorting according to age and find senior most
+and they would form a queue
+
+say I want only the top k people
+
+// insertion 
+
+// heap as an array
+
+we need heap to maintain parent and child relatioships
+
+
+but this is a cbt , it can be flsttened down 
+in an array
+
+i
+2i
+2i+1
+
+
+
+
+
+
