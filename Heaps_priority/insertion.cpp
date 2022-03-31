@@ -20,8 +20,22 @@ class MaxHeap{
         while(idx>1 && v[parent]<v[idx]){
             swap(v[idx],v[parent]);
             // now the idx becomes parents 
-            idx = idx/2;
+            idx = parent;
+            parent = parent/2;
         }
+    }
+    int extract_Max(){
+        int data = maximum();
+        // swap the first and last element
+        swap(v[1],v[v.size()-1]);
+        // reduce the heap size by 1
+        v.pop_back();
+        // now , call max heapify to retain maxheap property
+        max_heapify(v,1,v.size()-1);
+        return data;
+    }
+    bool empty(){
+        return v.size()==1;
     }
     void max_heapify(vector<int> &v,int i,int N){
         // find out the left and right childs
@@ -48,13 +62,8 @@ class MaxHeap{
             max_heapify(v,i,N);
         }
     }
-
     int maximum(){
         return v[1];
-    }
-    int extract_maximum(){
-        // this function will removfe the maximum element , i.e root
-
     }
     void display(){
         for(int i=1;i<v.size();i++){
@@ -71,6 +80,8 @@ int main(){
     h.insert(2);
     h.insert(0);
     h.display();
-    cout<<h.maximum();
+    cout<<h.maximum()<<endl;
+    cout<<h.extract_Max()<<endl;
+    h.display();
     return 0;
 }

@@ -39,7 +39,7 @@ void buildheap(int arr[],int n){
     int right(int i) { return (2*i + 2); } 
     int parent(int i) { return (i-1)/2; } 
     
-    void ins ) 
+    void insert(int x)  
     { 
     if (size == capacity)return;
     size++; 
