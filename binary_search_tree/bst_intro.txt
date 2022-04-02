@@ -1,0 +1,9 @@
+bst problems follow a recursive structure 
+
+mostly all problems can be solved by dividing
+the problem into subproblems and making recursive calls
+on subtrees
+
+inorder traversal is always sorted 
+
+bst makes searching efficient
