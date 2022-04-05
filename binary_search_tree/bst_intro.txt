@@ -7,3 +7,23 @@ on subtrees
 inorder traversal is always sorted 
 
 bst makes searching efficient
+
+deletion in a bst :
+    3 cases to to considered :
+
+    1) node with 0 children :
+    we'll simply delete the node
+
+    2) node with 1 children :
+    // it can be either left child or right child
+    we'll simply return that child to the its parent node which will further return that node to its parent node
+    i.e you can say that node is returned to its grandparent
+    & we'll simply delete that node
+
+    3) node with 2 children 
+    // now this one is the trickiest one
+    you have to find the inorder successor of that node
+    and return that
+    and the inorder successor of that node is the smallest element in the right subtreee
+    
+
