@@ -1,0 +1,19 @@
+so basically 
+E-Shopping Cart
+
+    classes :
+    1) Product 
+        product id 
+        name 
+        price
+    2) Items
+        product
+        quantity 
+        price
+    3) Cart
+        items 
+        total price 
+features : view products 
+            add product to the Cart
+            quantity
+            checkout/total
